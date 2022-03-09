@@ -1,0 +1,66 @@
+﻿@model WebBlob.Models.TopicModel
+
+@{
+    ViewBag.Title = "EditTopic";
+    Layout = "~/Views/Shared/_Layout_Blog.cshtml";
+}
+
+<h2>EditTopic</h2>
+
+@using (Html.BeginForm("EditTopic", "Home", FormMethod.Post))
+{
+
+<div class="row">
+    <div class="col-md-3">
+        <label for="lblPw">ID</label>
+
+
+        @Html.TextBoxFor(m => m.id, new { @class = "form-control", @maxlength = "150", @readonly = "readonly" })
+
+    </div>
+    <div class="col-md-6">
+        <label for="lblUser">Topic:</label>
+
+
+        @Html.TextBoxFor(m => m.nmTopic, new { @class = "form-control", @maxlength = "150" })
+
+    </div>
+    <div class="col-md-3">
+        <label for="lblPw">User Creator</label>
+
+
+        @Html.TextBoxFor(m => m.idUser, new { @class = "form-control", @maxlength = "150" })
+
+    </div>
+
+
+
+
+</div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <label for="lblUser">Status:</label>
+
+
+            @Html.TextBoxFor(m => m.Status, new { @class = "form-control", @maxlength = "150", @readonly = "readonly" })
+
+        </div>
+        <div class="col-md-6">
+        
+            <input id="btnSumit" type="submit" value="Save" class="btn-success" />
+            <input id="btnClean" type="reset" value="Clean" class="btn-primary" />
+
+        </div>
+
+
+
+
+    </div>
+
+
+  
+
+
+
+}

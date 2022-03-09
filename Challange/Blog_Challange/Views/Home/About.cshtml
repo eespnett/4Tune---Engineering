@@ -1,0 +1,98 @@
+﻿@model WebBlob.Models.RegisterModel
+
+
+@{
+    ViewBag.Title = "Register";
+}
+<div class="alert-info">
+    <h1 style="text-align:center">Register</h1>
+</div>
+
+
+@if (ViewBag.Message!=null)
+{
+
+}
+
+<div class="label-danger">
+    <h1 style="text-align:center">@ViewBag.Message</h1>
+</div>
+
+
+
+@using (Html.BeginForm("About", "Home", FormMethod.Post))
+{
+
+    <div class="row">
+        <div class="col-md-6">
+            <label for="lblUser">Name:</label>
+
+
+            @Html.TextBoxFor(m => m.strNome, new { @class = "form-control", @maxlength = "150" })
+
+        </div>
+        <div class="col-md-6">
+            <label for="lblPw">E-mail</label>
+
+
+            @Html.TextBoxFor(m => m.strEmail, new { @class = "form-control", @maxlength = "150" })
+
+        </div>
+
+
+
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <label for="lblUser">Date of Birth:</label>
+
+
+            @Html.TextBoxFor(m => m.dtNasc, new { @class = "form-control", @maxlength = "150" })
+
+        </div>
+        <div class="col-md-6">
+            <label for="lblPw">User Name</label>
+
+
+            @Html.TextBoxFor(m => m.strUser, new { @class = "form-control", @maxlength = "150" })
+
+        </div>
+
+
+
+
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-4" style="padding:2%">
+            <label for="lblUser">Password:</label>
+
+
+            @Html.TextBoxFor(m => m.strSenha, new { @class = "form-control", @maxlength = "150" })
+
+        </div>
+        <div class="col-md-4">
+            <label for="lblPw">Password: (confirmation)</label>
+
+
+            @Html.TextBoxFor(m => m.strSenhaConfirmacao, new { @class = "form-control", @maxlength = "150" })
+
+        </div>
+        <div class="col-md-4">
+            <input id="btnSumit" type="submit" value="Register" class="btn-success" />
+            <input id="btnClean" type="reset" value="Clean" class="btn-primary" />
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+}

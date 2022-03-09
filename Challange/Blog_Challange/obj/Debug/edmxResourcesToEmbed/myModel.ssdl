@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db4TuneModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TbCommnet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nmComment" Type="varchar(max)" />
+    <Property Name="Comment" Type="varchar(max)" />
+    <Property Name="DtComment" Type="date" />
+    <Property Name="Status" Type="int" />
+  </EntityType>
+  <EntityType Name="tbTopic">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nmTopic" Type="varchar(max)" />
+    <Property Name="idUserCreator" Type="int" />
+    <Property Name="DtCreator" Type="date" />
+    <Property Name="Status" Type="int" />
+  </EntityType>
+  <EntityType Name="TbUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="150" />
+    <Property Name="Email" Type="varchar" MaxLength="150" />
+    <Property Name="DtNascimento" Type="date" />
+    <Property Name="user" Type="varchar" MaxLength="150" />
+    <Property Name="senha" Type="varchar" MaxLength="150" />
+    <Property Name="Status" Type="int" />
+  </EntityType>
+  <EntityContainer Name="db4TuneModelStoreContainer">
+    <EntitySet Name="TbCommnet" EntityType="Self.TbCommnet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbTopic" EntityType="Self.tbTopic" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TbUser" EntityType="Self.TbUser" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

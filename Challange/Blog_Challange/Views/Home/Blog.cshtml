@@ -1,0 +1,82 @@
+﻿@model WebBlob.Models.BlogModel
+
+
+
+@{
+    ViewBag.Title = "Blog";
+    Layout = "~/Views/Shared/_Layout_Blog.cshtml";
+}
+
+
+<div class="jumbotron">
+    Olá @Model.oUser.Nome.ToString()
+</div>
+<div class="row">
+    Topics
+</div>
+
+<div class="row">
+
+    <div class="col-md-3">
+        ID
+
+    </div>
+
+    <div class="col-md-3">
+        Topic
+
+
+    </div>
+    <div class="col-md-3">
+        Creation Date
+
+
+    </div>
+    <div class="col-md-3">
+        Action
+
+    </div>
+
+</div>
+
+@Html.ActionLink("Create Topic ", "EditTopic" )
+
+
+
+
+@foreach (var item in Model.ListEntityTopic)
+{
+    <div class="row">
+
+
+        <div class="col-md-3">
+            @item.id
+
+        </div>
+
+        <div class="col-md-3">
+
+            @item.nmTopic.ToString()
+
+
+        </div>
+        <div class="col-md-3">
+
+
+            @item.DtCreator.ToString();
+
+
+        </div>
+        <div class="col-md-3">
+
+            @if (item.idUserCreator == Model.oUser.id)
+            {
+                @Html.ActionLink("Edit", "EditTopic", new { idTopic = item.id })
+            }
+
+
+        </div>
+
+
+    </div>
+}

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="db4TuneModelStoreContainer" CdmEntityContainer="db4TuneEntities">
+    <EntitySetMapping Name="TbCommnets">
+      <EntityTypeMapping TypeName="db4TuneModel.TbCommnet">
+        <MappingFragment StoreEntitySet="TbCommnet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="nmComment" ColumnName="nmComment" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="DtComment" ColumnName="DtComment" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbTopics">
+      <EntityTypeMapping TypeName="db4TuneModel.tbTopic">
+        <MappingFragment StoreEntitySet="tbTopic">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="nmTopic" ColumnName="nmTopic" />
+          <ScalarProperty Name="idUserCreator" ColumnName="idUserCreator" />
+          <ScalarProperty Name="DtCreator" ColumnName="DtCreator" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TbUsers">
+      <EntityTypeMapping TypeName="db4TuneModel.TbUser">
+        <MappingFragment StoreEntitySet="TbUser">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DtNascimento" ColumnName="DtNascimento" />
+          <ScalarProperty Name="user" ColumnName="user" />
+          <ScalarProperty Name="senha" ColumnName="senha" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

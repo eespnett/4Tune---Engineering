@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db4TuneModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TbCommnet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nmComment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DtComment" Type="DateTime" Precision="0" />
+    <Property Name="Status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbTopic">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nmTopic" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="idUserCreator" Type="Int32" />
+    <Property Name="DtCreator" Type="DateTime" Precision="0" />
+    <Property Name="Status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TbUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="DtNascimento" Type="DateTime" Precision="0" />
+    <Property Name="user" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="senha" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="db4TuneEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TbCommnets" EntityType="Self.TbCommnet" />
+    <EntitySet Name="tbTopics" EntityType="Self.tbTopic" />
+    <EntitySet Name="TbUsers" EntityType="Self.TbUser" />
+  </EntityContainer>
+</Schema>
